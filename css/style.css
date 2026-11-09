@@ -1,18 +1,78 @@
+{
+    box-sizing: border-box;
+}
 body{
-    background : #f7f3e8;
-    color : #660f59;
-    border: 2px solid rgb(212,0, 168);
+    margin:0;
+    background : #63214b;
+    color : #257b86;
+    line-height: 1.5;
+    /*font faces*/
+
 }
-h1,h2,h3{
-    border-width:6 px;
-    border-color:rgb(212, 0, 168);
-    border-style:solid;
-    padding-top: 100px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    padding-left: 50px;
-    margin-top: 50px;
+
+h1,h2 {
+  font-family: "Source Serif 4", serif;
+  
+  font-weight: 600;
+ 
 }
-strong,i,a{
-    border:2px solid rgb(255, 0, 136)
+body{
+    font-family: "Source Sans 3", sans-serif;
+
 }
+
+
+header{
+    background: #1F6F3E;
+    color: #f7f3E8;
+}
+nav{
+    background: black;
+}
+nav a{
+    color: #1F6F3E;
+}
+a{
+   color: #1F6F3E; 
+}
+header, main,aside, footer{
+    padding:1rem;/*a relative unit of measurement that is based on the font size of the root element (usually the <html> element)*/
+}
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+/*flexbox - organizing element along an axis - menu "s"*/
+nav ul {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 0.25rem 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+nav{
+    position: sticky;
+    top: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns:mimax(0,1fr) 18rem;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+
+}
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+
+
+
+
